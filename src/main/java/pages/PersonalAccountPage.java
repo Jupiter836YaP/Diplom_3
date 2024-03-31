@@ -16,6 +16,7 @@ public class PersonalAccountPage extends BasePage {
         super(driver);
     }
 
+    @Step("Нажать на кнопку 'Выход'")
     public LoginPage clickExitButton() {
         new WebDriverWait(driver, Duration.ofSeconds(3))
                 .until(ExpectedConditions.visibilityOfElementLocated(buttonExit));
@@ -23,6 +24,7 @@ public class PersonalAccountPage extends BasePage {
         return new LoginPage(driver);
     }
 
+    @Step("Получить текст из кнопки 'Профиль'")
     public String getProfileText() {
         new WebDriverWait(driver, Duration.ofSeconds(3))
                 .until(ExpectedConditions.visibilityOfElementLocated(buttonProfile));

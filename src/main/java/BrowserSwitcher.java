@@ -3,17 +3,17 @@ import org.openqa.selenium.WebDriver;
 
 public class BrowserSwitcher {
     public static WebDriver getDriver(String browserName) {
-        WebDriver webDriver;
+        WebDriver driver;
         switch (browserName) {
             case "chrome":
-                webDriver = WebDriverManager.chromedriver().create();
+                driver = WebDriverManager.chromedriver().create();
                 break;
             case "firefox":
-                webDriver = WebDriverManager.firefoxdriver().create();
+                driver = WebDriverManager.firefoxdriver().create();
                 break;
             default:
                 throw new RuntimeException("invalid browser name");
         }
-        return webDriver;
+        return driver;
     }
 }
